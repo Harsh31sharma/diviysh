@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Divyanshi!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce4ec; /* Light pink background */
+            color: #4a4a4a; /* Dark gray text */
+            line-height: 1.6;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            flex-grow: 1; /* Allow container to grow and fill available space */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #ff6b81, #ff9ff3); /* Pink to purple gradient */
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #e91e63, #9c27b0); /* Deeper pink to purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(255, 107, 129, 0.6);
+        }
+        .nav-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .nav-button.active {
+            background: white;
+            color: #ff6b81;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        /* Page content hiding */
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: grid; /* Use grid for main pages */
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-8 md:py-16">
+        <!-- Header Section -->
+        <header class="card header-bg text-white text-center p-8 mb-8">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 glow-text">
+                Happy Birthday, Divyanshi!
+            </h1>
+            <p class="text-xl md:text-2xl font-light">Wishing you a day filled with joy, laughter, and everything wonderful!</p>
+
+            <!-- Navigation Buttons -->
+            <nav class="mt-6 flex flex-wrap justify-center gap-4">
+                <button class="nav-button active" onclick="showPage('home')">Home</button>
+                <button class="nav-button" onclick="showPage('about')">About Divyanshi</button>
+            </nav>
+        </header>
+
+        <!-- Main Content Section (Home Page) -->
+        <main id="home-page" class="page-content active grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Message Card -->
+            <section class="card p-8 flex flex-col justify-center items-center text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient">To My Dearest Friend,</h2>
+                <p class="text-lg mb-6">
+Happy birthday to one of my favorite people in the entire world! 🎉 I hope your special day is as absolutely amazing as you are. May this next year of your life be brimming with even more exciting adventures 🌍, incredible new achievements 🏆, and countless beautiful memories that you'll cherish forever.
+
+Thank you for being such an truly incredible friend – you honestly make the world a much brighter and happier place just by being you! ✨ From our laughs together to all the good times we share, every moment is a treasure. Here's to a year filled with abundant joy, endless laughter, and everything wonderful you so deeply deserve. May it be a year of personal growth, exciting discoveries, and moments that take your breath away. Wishing you all the happiness and success in the world on your special day and always! ❤️                </p>
+                <p class="text-xl font-semibold text-pink-500">With lots of love,</p>
+                <p class="text-2xl font-bold mt-2 text-purple-600">Harsh</p>
+            </section>
+
+            <!-- Image Gallery Section (Reduced Photos) -->
+            <section class="card p-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-gradient">Cherished Moments</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                    <!-- Placeholder Images - Reduced to 4 for the home page -->
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="5.jpg" alt="Divyanshi's Picture 1" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="3.jpg" alt="Divyanshi's Picture 2" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="2.jpg" alt="Divyanshi's Picture 3" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="1.jpg" alt="Divyanshi's Picture 4" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- About Divyanshi Page -->
+        <section id="about-page" class="page-content grid grid-cols-1 md:grid-cols-1 gap-8 mt-8"> <!-- Added mt-8 here -->
+            <div class="card p-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient">All About Divyanshi!</h2>
+                <div class="mb-6 flex justify-center">
+                    <img src="6.jpg" alt="Divyanshi Profile Picture" class="rounded-full w-32 h-32 object-cover shadow-lg border-4 border-pink-300">
+                </div>
+                <p class="text-lg mb-4">
+                    Divyanshi is an amazing friend, always there to lend an ear or share a laugh. She's known for her bright smile, infectious energy, and incredible kindness. Whether it's embarking on new adventures or simply enjoying a quiet evening, her presence always makes things better.
+                </p>
+                <p class="text-lg mb-4">
+                    Her creativity and passion for life are truly inspiring. Every moment spent with Divyanshi is a treasure. We wish her all the success and happiness in her future endeavors!
+                </p>
+                <p class="text-lg font-semibold text-purple-500">
+                    Here's to many more wonderful years and memories!
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="card text-center p-6 mt-auto bg-pink-100 rounded-none rounded-t-xl">
+        <p class="text-sm text-gray-500">Made with love for Divyanshi's special day by Harsh.</p>
+    </footer>
+
+    <script>
+        // Function to show the selected page and highlight the active button
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Deactivate all navigation buttons
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected page
+            const selectedPage = document.getElementById(pageId + '-page');
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+
+            // Activate the corresponding navigation button
+            const activeButton = document.querySelector(`.nav-button[onclick="showPage('${pageId}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+
+        // Show the home page by default when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
